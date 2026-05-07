@@ -298,6 +298,81 @@
           style="width:min(800px,92vw); border-radius:18px;
                  border:2px solid rgba(220,38,38,0.3);"></video>
     -->
+    /* Container relativo para posicionar o overlay */
+    .video-container {
+      position: relative;
+      display: inline-block;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 2px solid rgba(220,38,38,0.3);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.05),
+        0 12px 48px rgba(0,0,0,0.75),
+        0 0 60px rgba(220,38,38,0.12);
+    }
+
+    /* Remove border/shadow do video-frame pois o container já tem */
+    .video-container .video-frame {
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    /* Overlay escuro sobre o vídeo */
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: rgba(0,0,0,0.45);
+      cursor: pointer;
+      transition: background 0.25s;
+    }
+
+    .video-overlay:hover { background: rgba(0,0,0,0.3); }
+
+    .video-overlay.hidden { display: none; }
+
+    /* Botão de play */
+    .video-play-btn {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(220,38,38,0.55), 0 0 0 8px rgba(220,38,38,0.15);
+      animation: redPulse 2.4s ease-in-out infinite;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .video-overlay:hover .video-play-btn {
+      transform: scale(1.1);
+      box-shadow: 0 12px 48px rgba(220,38,38,0.7), 0 0 0 12px rgba(220,38,38,0.2);
+      animation-play-state: paused;
+    }
+
+    .video-play-btn svg {
+      width: 32px;
+      height: 32px;
+      fill: #fff;
+      margin-left: 6px;
+    }
+
+    .video-play-label {
+      font-family: var(--fh);
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+
     .video-caption {
       font-size: 13px;
       color: var(--muted);
@@ -831,24 +906,30 @@
                      border:2px solid rgba(220,38,38,0.3);display:block;"></video>
           ═══════════════════════════════════════════════════════
         -->
-        <!--
-          Vídeo da Dra. Luana — coloque o arquivo em:
-          public/lp-assets/video-dra-luana.mp4
-          Após adicionar o arquivo, o vídeo aparece automaticamente.
-        -->
-        <video
-          class="video-frame"
-          src="/lp-assets/video-dra-luana.mp4"
-          controls
-          playsinline
-          autoplay
-          muted
-          preload="auto"
-          aria-label="Vídeo da Dra. Luana Fernandes explicando seus direitos"
-          style="display:block; background:#0d0d0d;"
-        >
-          Seu navegador não suporta a reprodução de vídeo.
-        </video>
+        <!-- Wrapper com botão de play customizado centralizado -->
+        <div class="video-container" id="videoContainer">
+          <video
+            id="draVideo"
+            class="video-frame"
+            src="/lp-assets/video-dra-luana.mp4"
+            playsinline
+            preload="metadata"
+            aria-label="Vídeo da Dra. Luana Fernandes explicando seus direitos"
+            style="display:block; background:#0d0d0d;"
+          >
+            Seu navegador não suporta a reprodução de vídeo.
+          </video>
+
+          <!-- Overlay com play button centralizado -->
+          <div class="video-overlay" id="videoOverlay" role="button" aria-label="Assistir vídeo" tabindex="0">
+            <div class="video-play-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <polygon points="5,3 19,12 5,21"/>
+              </svg>
+            </div>
+            <p class="video-play-label">Assistir agora</p>
+          </div>
+        </div>
 
         <p class="video-caption">Dra. Luana explica como funciona em menos de 2 minutos</p>
       </div>
@@ -1129,6 +1210,22 @@
         el.dataset.delay = i * 80;
         io.observe(el);
       });
+
+      // Play button customizado
+      var overlay = document.getElementById('videoOverlay');
+      var video   = document.getElementById('draVideo');
+
+      function startVideo() {
+        overlay.classList.add('hidden');
+        video.play();
+      }
+
+      if (overlay && video) {
+        overlay.addEventListener('click', startVideo);
+        overlay.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') startVideo();
+        });
+      }
 
       // Tracking — dispara eventos ao clicar em qualquer CTA
       document.querySelectorAll('[data-cta-btn]').forEach(function (btn) {
