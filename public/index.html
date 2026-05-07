@@ -1220,11 +1220,21 @@
         video.play();
       }
 
+      function pauseVideo() {
+        video.pause();
+        overlay.classList.remove('hidden');
+        // Troca o label para "Retomar"
+        var label = overlay.querySelector('.video-play-label');
+        if (label) label.textContent = 'Retomar';
+      }
+
       if (overlay && video) {
         overlay.addEventListener('click', startVideo);
         overlay.addEventListener('keydown', function (e) {
           if (e.key === 'Enter' || e.key === ' ') startVideo();
         });
+        // Clicar no vídeo enquanto toca → pausa e mostra overlay
+        video.addEventListener('click', pauseVideo);
       }
 
       // Tracking — dispara eventos ao clicar em qualquer CTA
