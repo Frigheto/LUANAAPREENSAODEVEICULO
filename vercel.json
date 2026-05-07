@@ -1,5 +1,5 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/lp-busca-apreensao.html" }
-  ]
+  "buildCommand": null,
+  "outputDirectory": "public",
+  "framework": null
 }
