@@ -1,0 +1,10 @@
+INSTRUCOES PARA O VIDEO DA DRA. LUANA
+======================================
+
+1. Coloque o arquivo de video nesta pasta (lp-assets/)
+2. Renomeie o arquivo para: video-dra-luana.mp4
+3. O video ja esta referenciado na landing page como: /lp-assets/video-dra-luana.mp4
+4. Formato ideal: MP4, codec H.264, proporcao 9:16 (vertical), resolucao 1080x1920
+
+Apos adicionar o arquivo, o video aparece automaticamente na pagina.
+Nao e preciso alterar nenhum codigo.

@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npm run *)",
+      "Bash(Get-Content \"C:\\\\Users\\\\pc\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-pc-Downloads-dsfghuyvash-landingpagedraluana-main\\\\5f2f12d5-82ce-46e5-a73f-e0b7a340ea36\\\\tasks\\\\bo1ja2bjo.output\" -Wait)",
+      "Bash(Select-String -Pattern \"Local:|ready|error|Error\" --line-buffered)",
+      "PowerShell(npm install *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\pc\\\\Downloads\\\\dsfghuyvash\\\\landingpagedraluana-main\" -Recurse)",
+      "Bash(Select-Object FullName)",
+      "Bash(Get-ChildItem \"C:\\\\Users\\\\pc\\\\Downloads\\\\dsfghuyvash\\\\landingpagedraluana-main\\\\public\" -Recurse)",
+      "Bash(Select-Object FullName, Length)",
+      "PowerShell(New-Item *)",
+      "PowerShell(Rename-Item *)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git pull *)"
+    ]
+  }
+}

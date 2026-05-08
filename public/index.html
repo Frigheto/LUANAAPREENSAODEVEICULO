@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Busca e Apreensão do Veículo? Você Pode Ter Direito de Contestar | Dra. Luana Fernandes</title>
+  <meta name="description" content="O banco mandou buscar seu carro? Antes de perder o veículo, saiba: contratos com juros abusivos podem ser contestados na Justiça. Análise gratuita." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Busca e Apreensão do Veículo? Você Pode Ter Direito de Contestar." />
+  <meta property="og:description" content="Contratos com juros abusivos podem ser contestados na Justiça. Segure seu carro. Análise gratuita." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <!-- TROQUE: og:url e og:image com sua URL real -->
+  <meta property="og:url" content="https://seusite.com.br" />
+  <meta property="og:image" content="https://seusite.com.br/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1278617913897367');fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1278617913897367&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- GTM HEAD: cole aqui o snippet do Google Tag Manager -->
+  <!-- GTM HEAD AQUI -->
+
+  <!-- META PIXEL: cole aqui o código do Pixel da Meta -->
+  <!-- META PIXEL AQUI -->
+
+  <!-- Google Fonts — Montserrat (headings) + Inter (body), igual ao projeto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ================================================================
+       RESET
+    ================================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    img, video, iframe { max-width: 100%; display: block; }
+
+    /* ================================================================
+       TOKENS — replicando index.css do projeto
+    ================================================================ */
+    :root {
+      --bg:        #141414;
+      --bg-dark:   #0a0a0a;
+      --bg-card:   #0f0f0f;
+      --card:      #1e1e1e;
+      --red:       #dc2626;
+      --red-dark:  #b91c1c;
+      --text:      #fafafa;
+      --muted:     #a3a3a3;
+      --dim:       #525252;
+      --radius:    12px;
+      --fh:        'Montserrat', sans-serif;
+      --fb:        'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--fb);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* ================================================================
+       KEYFRAMES
+    ================================================================ */
+    @keyframes float {
+      0%,100% { transform: translateY(0)    translateX(0)    scale(1);    }
+      33%      { transform: translateY(-28px) translateX(18px) scale(1.04); }
+      66%      { transform: translateY(18px)  translateX(-18px) scale(0.96); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+
+    @keyframes redGlow {
+      from { filter: drop-shadow(0 0 6px  rgba(220,38,38,0.35)); }
+      to   { filter: drop-shadow(0 0 28px rgba(220,38,38,0.75)); }
+    }
+
+    @keyframes waPulse {
+      0%   { box-shadow: 0 0 0 0   rgba(37,211,102,0.55), 0 10px 36px rgba(37,211,102,0.3); }
+      70%  { box-shadow: 0 0 0 16px rgba(37,211,102,0),   0 10px 36px rgba(37,211,102,0.3); }
+      100% { box-shadow: 0 0 0 0   rgba(37,211,102,0),   0 10px 36px rgba(37,211,102,0.3); }
+    }
+
+    @keyframes redPulse {
+      0%,100% { box-shadow: 0 10px 40px rgba(220,38,38,0.35); }
+      50%      { box-shadow: 0 10px 56px rgba(220,38,38,0.65); }
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s cubic-bezier(0.4,0,0.2,1),
+                  transform 0.75s cubic-bezier(0.4,0,0.2,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ================================================================
+       LAYOUT
+    ================================================================ */
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+
+    /* ================================================================
+       HERO
+       Estrutura: badge → headline → subheadline → vídeo → botão agendar → stats
+    ================================================================ */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 96px 24px 80px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Background fotográfico — veículo, tema busca e apreensão */
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('/lp-assets/bg-hero.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      background-attachment: fixed;
+      filter: brightness(0.22) saturate(0.7);
+    }
+
+    /* Overlay gradiente igual ao .hero-overlay do projeto */
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(0,0,0,0.75) 0%,
+        rgba(0,0,0,0.45) 45%,
+        rgba(0,0,0,0.85) 100%
+      );
+    }
+
+    /* Glow orbs flutuantes */
+    .glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(110px);
+      opacity: 0.16;
+      animation: float 12s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .glow-orb--a { width: 480px; height: 480px; background: var(--red); top: -100px; left: -120px; }
+    .glow-orb--b { width: 360px; height: 360px; background: #ef4444; bottom: -60px; right: -100px; animation-delay: 4s; }
+
+    /* Padrão de pontos sutil */
+    .hero__dots {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(220,38,38,0.07) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .hero__inner {
+      position: relative;
+      z-index: 10;
+      max-width: 900px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    /* Badge */
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 999px;
+      background: rgba(220,38,38,0.15);
+      border: 1px solid rgba(220,38,38,0.4);
+      color: #f87171;
+      font-family: var(--fh);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
+      margin-bottom: 28px;
+      animation: fadeUp 0.55s ease 0.05s both;
+    }
+
+    .hero__badge svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+    /* Headline */
+    .hero__h1 {
+      font-family: var(--fh);
+      font-size: clamp(34px, 7.5vw, 84px);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      margin-bottom: 24px;
+      animation: fadeUp 0.65s ease 0.15s both;
+    }
+
+    .hero__h1 .wh { color: #ffffff; display: block; text-shadow: 0 2px 24px rgba(0,0,0,0.6); }
+    .hero__h1 .rd {
+      display: block;
+      color: var(--red);
+      margin-top: 4px;
+      animation: redGlow 3s ease-in-out infinite alternate;
+    }
+
+    /* Subheadline */
+    .hero__sub {
+      font-size: clamp(16px, 2.8vw, 21px);
+      color: #e5e5e5;
+      max-width: 580px;
+      line-height: 1.65;
+      margin-bottom: 48px;
+      animation: fadeUp 0.65s ease 0.25s both;
+    }
+
+    .hero__sub strong { color: #ffffff; font-weight: 600; }
+
+    /* ── VÍDEO dentro do hero ───────────────────────────────── */
+    .hero__video-wrap {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+      animation: fadeUp 0.7s ease 0.35s both;
+    }
+
+    .video-frame {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 2px solid rgba(220,38,38,0.3);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.05),
+        0 12px 48px rgba(0,0,0,0.75),
+        0 0 60px rgba(220,38,38,0.12);
+      cursor: pointer;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .video-frame:hover {
+      border-color: rgba(220,38,38,0.55);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.07),
+        0 16px 64px rgba(0,0,0,0.85),
+        0 0 80px rgba(220,38,38,0.25);
+    }
+
+    /* Sempre 9:16 (vertical) — formato de vídeo mobile/reels */
+    .video-frame {
+      width: min(380px, 88vw);
+      aspect-ratio: 9/16;
+    }
+
+    /*
+      TROQUE: substitua .video-ph pelo embed do vídeo real.
+
+      YouTube:
+        <div style="position:relative; width:min(800px,92vw); aspect-ratio:16/9;
+                    border-radius:18px; overflow:hidden;
+                    border:2px solid rgba(220,38,38,0.3);
+                    box-shadow:0 12px 48px rgba(0,0,0,0.75);">
+          <iframe style="position:absolute;inset:0;width:100%;height:100%;"
+            src="https://www.youtube.com/embed/SEU_VIDEO_ID"
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+
+      Vimeo:
+        <div style="position:relative; width:min(800px,92vw); aspect-ratio:16/9; ...">
+          <iframe style="position:absolute;inset:0;width:100%;height:100%;"
+            src="https://player.vimeo.com/video/SEU_VIDEO_ID"
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+
+      MP4 direto:
+        <video src="/seu-video.mp4" controls poster="/thumb.jpg"
+          style="width:min(800px,92vw); border-radius:18px;
+                 border:2px solid rgba(220,38,38,0.3);"></video>
+    -->
+    /* Container relativo para posicionar o overlay */
+    .video-container {
+      position: relative;
+      display: inline-block;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 2px solid rgba(220,38,38,0.3);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.05),
+        0 12px 48px rgba(0,0,0,0.75),
+        0 0 60px rgba(220,38,38,0.12);
+    }
+
+    /* Remove border/shadow do video-frame pois o container já tem */
+    .video-container .video-frame {
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+    }
+
+    /* Overlay escuro sobre o vídeo */
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: rgba(0,0,0,0.45);
+      cursor: pointer;
+      transition: background 0.25s;
+    }
+
+    .video-overlay:hover { background: rgba(0,0,0,0.3); }
+
+    .video-overlay.hidden { display: none; }
+
+    /* Botão de play */
+    .video-play-btn {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(220,38,38,0.55), 0 0 0 8px rgba(220,38,38,0.15);
+      animation: redPulse 2.4s ease-in-out infinite;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .video-overlay:hover .video-play-btn {
+      transform: scale(1.1);
+      box-shadow: 0 12px 48px rgba(220,38,38,0.7), 0 0 0 12px rgba(220,38,38,0.2);
+      animation-play-state: paused;
+    }
+
+    .video-play-btn svg {
+      width: 32px;
+      height: 32px;
+      fill: #fff;
+      margin-left: 6px;
+    }
+
+    .video-play-label {
+      font-family: var(--fh);
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+
+    .video-caption {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ── Botão AGENDAR (vermelho, abaixo do vídeo) ──────────── */
+    .btn-schedule {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+      color: #fff;
+      font-family: var(--fh);
+      font-size: clamp(15px, 3vw, 18px);
+      font-weight: 700;
+      text-decoration: none;
+      padding: 18px 40px;
+      border-radius: 999px;
+      letter-spacing: 0.01em;
+      box-shadow: 0 10px 40px rgba(220,38,38,0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      max-width: 440px;
+      width: 100%;
+      animation: fadeUp 0.7s ease 0.45s both;
+    }
+
+    .btn-schedule:hover {
+      background: linear-gradient(135deg, #ef4444 0%, var(--red) 100%);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 16px 50px rgba(220,38,38,0.55);
+    }
+
+    .btn-schedule:active { transform: translateY(0) scale(1); }
+
+    .btn-schedule svg {
+      width: 20px; height: 20px;
+      stroke: currentColor; fill: none;
+      stroke-width: 2.5;
+      transition: transform 0.2s;
+    }
+
+    .btn-schedule:hover svg { transform: translateX(4px); }
+
+    /* Nota abaixo do botão */
+    .btn-note {
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      animation: fadeUp 0.7s ease 0.5s both;
+    }
+
+    .btn-note::before {
+      content: '';
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #4ade80;
+      flex-shrink: 0;
+    }
+
+    /* Divisor */
+    .hero__divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(220,38,38,0.4), transparent);
+      margin: 12px 0;
+      animation: fadeUp 0.7s ease 0.5s both;
+    }
+
+    /* Stats */
+    .hero__stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 48px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      width: 100%;
+      animation: fadeUp 0.7s ease 0.55s both;
+    }
+
+    .stat { text-align: center; }
+
+    .stat__n {
+      font-family: var(--fh);
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 900;
+      color: var(--red);
+      filter: drop-shadow(0 0 12px rgba(220,38,38,0.5));
+      line-height: 1;
+    }
+
+    .stat__l {
+      font-size: 13px;
+      color: #d4d4d4;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    /* Fade de saída para próxima seção */
+    .hero__fade {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 140px;
+      background: linear-gradient(to top, var(--bg), transparent);
+      pointer-events: none;
+    }
+
+    /* ================================================================
+       SEÇÃO GENÉRICA
+    ================================================================ */
+    .section {
+      padding: 88px 24px;
+    }
+
+    .section--dark  { background: var(--bg-dark); }
+    .section--mid   { background: var(--bg-card); }
+    .section--base  { background: var(--bg); }
+
+    .section__label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 18px;
+      border-radius: 999px;
+      background: rgba(220,38,38,0.1);
+      border: 1px solid rgba(220,38,38,0.3);
+      color: #f87171;
+      font-family: var(--fh);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .section__h {
+      font-family: var(--fh);
+      font-size: clamp(24px, 4.5vw, 42px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .section__h span { color: var(--red); }
+
+    .section__p {
+      font-size: clamp(15px, 2.2vw, 18px);
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.65;
+    }
+
+    .section__header {
+      text-align: center;
+      margin-bottom: 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── Underline vermelho decorativo ───── */
+    .red-bar {
+      height: 3px;
+      width: 56px;
+      background: linear-gradient(90deg, var(--red), var(--red-dark));
+      border-radius: 2px;
+      margin: 18px auto 0;
+    }
+
+    /* ================================================================
+       WHATSAPP CTA BLOCK
+    ================================================================ */
+    .wa-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+    }
+
+    /* Glow radial atrás do botão */
+    .wa-block::before {
+      content: '';
+      position: absolute;
+      inset: -60px;
+      background: radial-gradient(ellipse at center, rgba(220,38,38,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .btn-wa {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #25d366;
+      color: #fff;
+      font-family: var(--fh);
+      font-size: clamp(15px, 3vw, 19px);
+      font-weight: 800;
+      text-decoration: none;
+      padding: 20px 44px;
+      border-radius: 999px;
+      letter-spacing: 0.01em;
+      animation: waPulse 2.4s ease infinite;
+      transition: transform 0.2s, background 0.2s;
+      max-width: 460px;
+      width: 100%;
+    }
+
+    .btn-wa:hover {
+      background: #1eb85a;
+      transform: translateY(-3px) scale(1.02);
+      animation-play-state: paused;
+    }
+
+    .btn-wa:active { transform: translateY(0) scale(1); }
+
+    .btn-wa svg { width: 24px; height: 24px; fill: currentColor; flex-shrink: 0; }
+
+    .wa-note {
+      position: relative;
+      z-index: 1;
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .wa-note::before {
+      content: '';
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #4ade80;
+      flex-shrink: 0;
+    }
+
+    /* ================================================================
+       FAIXA DE URGÊNCIA
+    ================================================================ */
+    .urgency {
+      background: #0a0a0a;
+      border-top: 1px solid rgba(220,38,38,0.2);
+      border-bottom: 1px solid rgba(220,38,38,0.2);
+      padding: 40px 24px;
+    }
+
+    .urgency__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    @media (min-width: 640px) {
+      .urgency__grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    }
+
+    .urgency__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .urgency__icon {
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(220,38,38,0.12);
+      border: 1px solid rgba(220,38,38,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f87171;
+      margin-top: 2px;
+    }
+
+    .urgency__icon svg { width: 17px; height: 17px; }
+
+    .urgency__title {
+      font-family: var(--fh);
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .urgency__desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ================================================================
+       SEÇÃO CTA WHATSAPP (bloco 3)
+    ================================================================ */
+    .cta-mid {
+      padding: 80px 24px;
+      background: var(--bg);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ================================================================
+       BULLETS DE PROVA (bloco 4)
+    ================================================================ */
+    .proof-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 700px;
+      margin-inline: auto;
+    }
+
+    /* Glass card — idêntico ao .glass-card do projeto */
+    .proof-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 26px 28px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(30,30,30,0.85) 0%, rgba(20,20,20,0.92) 100%);
+      backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow:
+        0 8px 32px rgba(0,0,0,0.55),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+
+    .proof-card:hover {
+      border-color: rgba(220,38,38,0.38);
+      box-shadow:
+        0 0 12px rgba(220,38,38,0.18),
+        0 8px 32px rgba(0,0,0,0.6),
+        inset 0 0 12px rgba(220,38,38,0.04);
+      transform: translateY(-3px);
+    }
+
+    .proof-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 18px rgba(220,38,38,0.42);
+      margin-top: 2px;
+    }
+
+    .proof-icon svg {
+      width: 16px; height: 16px;
+      stroke: #fff; stroke-width: 3;
+      fill: none;
+    }
+
+    .proof-body { flex: 1; }
+
+    .proof-body strong {
+      display: block;
+      font-family: var(--fh);
+      font-size: clamp(14px, 2.2vw, 16px);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .proof-body p {
+      font-size: clamp(13px, 1.8vw, 15px);
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ================================================================
+       BLOCO FINAL CTA
+    ================================================================ */
+    .cta-final {
+      padding: 88px 24px;
+      background: var(--bg-dark);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(220,38,38,0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .cta-final__h {
+      font-family: var(--fh);
+      font-size: clamp(24px, 5vw, 44px);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 36px;
+    }
+
+    .cta-final__h span { color: var(--red); }
+
+    /* ================================================================
+       FOOTER
+    ================================================================ */
+    .footer {
+      background: #080808;
+      border-top: 1px solid rgba(220,38,38,0.18);
+      text-align: center;
+      padding: 26px 24px;
+      font-size: 13px;
+      color: var(--dim);
+    }
+
+    /* ================================================================
+       SCROLLBAR — igual ao projeto original
+    ================================================================ */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, var(--red) 0%, var(--red-dark) 100%);
+      border-radius: 6px;
+      border: 2px solid var(--bg);
+    }
+    ::-webkit-scrollbar-thumb:hover { background: #ef4444; }
+
+    /* ================================================================
+       RESPONSIVO
+    ================================================================ */
+    @media (min-width: 768px) {
+      .hero   { padding: 112px 24px 96px; }
+      .section { padding: 104px 24px; }
+      .cta-mid, .cta-final { padding: 96px 24px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero__stats { gap: 28px; }
+      .btn-schedule, .btn-wa { padding: 17px 28px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- GTM BODY: cole aqui o snippet noscript do Google Tag Manager -->
+  <!-- GTM BODY AQUI -->
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  HERO — headline, vídeo e botão de agendamento          ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__dots"></div>
+    <div class="glow-orb glow-orb--a"></div>
+    <div class="glow-orb glow-orb--b"></div>
+
+    <div class="hero__inner">
+
+      <!-- Badge -->
+      <div class="hero__badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <rect x="1" y="3" width="15" height="13" rx="2"/>
+          <path d="M16 8h4l3 5v3h-7V8z"/>
+          <circle cx="5.5" cy="18.5" r="2.5"/>
+          <circle cx="18.5" cy="18.5" r="2.5"/>
+        </svg>
+        Defesa Contra Busca e Apreensão de Veículos
+      </div>
+
+      <!-- Headline -->
+      <h1 class="hero__h1">
+        <span class="wh">O banco está ameaçando</span>
+        <span class="rd">tomar seu carro?</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="hero__sub">
+        Antes de perder o veículo, você precisa saber:
+        <strong>contratos com juros abusivos podem ser contestados
+        na Justiça</strong> e você tem o direito de segurar o carro.
+      </p>
+
+      <!-- Vídeo -->
+      <div class="hero__video-wrap">
+
+        <!--
+          ═══════════════════════════════════════════════════════
+          TROQUE: substitua o bloco .video-frame pelo embed real.
+
+          YouTube — 9:16 (shorts/vertical):
+            <div style="position:relative;width:min(380px,88vw);aspect-ratio:9/16;
+                        border-radius:18px;overflow:hidden;
+                        border:2px solid rgba(220,38,38,0.3);
+                        box-shadow:0 12px 48px rgba(0,0,0,0.75);">
+              <iframe style="position:absolute;inset:0;width:100%;height:100%;"
+                src="https://www.youtube.com/embed/SEU_VIDEO_ID"
+                frameborder="0" allowfullscreen></iframe>
+            </div>
+
+          Vimeo — 9:16 (vertical):
+            <div style="position:relative;width:min(380px,88vw);aspect-ratio:9/16;
+                        border-radius:18px;overflow:hidden;
+                        border:2px solid rgba(220,38,38,0.3);
+                        box-shadow:0 12px 48px rgba(0,0,0,0.75);">
+              <iframe style="position:absolute;inset:0;width:100%;height:100%;"
+                src="https://player.vimeo.com/video/SEU_VIDEO_ID"
+                frameborder="0" allowfullscreen></iframe>
+            </div>
+
+          MP4 direto — 9:16:
+            <video src="/seu-video.mp4" controls poster="/thumb.jpg"
+              style="width:min(380px,88vw);aspect-ratio:9/16;border-radius:18px;
+                     border:2px solid rgba(220,38,38,0.3);display:block;"></video>
+          ═══════════════════════════════════════════════════════
+        -->
+        <!-- Wrapper com botão de play customizado centralizado -->
+        <div class="video-container" id="videoContainer">
+          <video
+            id="draVideo"
+            class="video-frame"
+            src="/lp-assets/video-dra-luana.mp4"
+            playsinline
+            preload="metadata"
+            aria-label="Vídeo da Dra. Luana Fernandes explicando seus direitos"
+            style="display:block; background:#0d0d0d;"
+          >
+            Seu navegador não suporta a reprodução de vídeo.
+          </video>
+
+          <!-- Overlay com play button centralizado -->
+          <div class="video-overlay" id="videoOverlay" role="button" aria-label="Assistir vídeo" tabindex="0">
+            <div class="video-play-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <polygon points="5,3 19,12 5,21"/>
+              </svg>
+            </div>
+            <p class="video-play-label">Assistir agora</p>
+          </div>
+        </div>
+
+        <p class="video-caption">Dra. Luana explica como funciona em menos de 2 minutos</p>
+      </div>
+
+      <!-- Botão agendar (vermelho, abaixo do vídeo) -->
+      <!--
+        TROQUE: substitua o href pelo link do seu agendamento.
+        Calendly:   https://calendly.com/seuperfil
+        WhatsApp:   https://wa.me/5500000000000?text=...
+        Google Meet / outro: cole a URL diretamente
+      -->
+      <a
+        class="btn-schedule"
+        href="https://wa.me/554599112656?text=Ol%C3%A1%2C%20Dra.%20Luana!%20Meu%20carro%20est%C3%A1%20sob%20amea%C3%A7a%20de%20busca%20e%20apreens%C3%A3o%20e%20gostaria%20de%20agendar%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20contrato."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Agendar análise gratuita do contrato com a Dra. Luana"
+        data-cta-btn
+      >
+        Analise seu caso em uma reunião com a Dra. Luana
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </a>
+
+      <p class="btn-note">Gratuito e sem compromisso. Resposta em menos de 1 minuto.</p>
+
+      <!-- Divisor -->
+      <div class="hero__divider"></div>
+
+      <!-- Stats de credibilidade — tema veículos -->
+      <div class="hero__stats">
+        <div class="stat">
+          <p class="stat__n">500+</p>
+          <p class="stat__l">Veículos Defendidos</p>
+        </div>
+        <div class="stat">
+          <p class="stat__n">98%</p>
+          <p class="stat__l">Taxa de Sucesso</p>
+        </div>
+        <div class="stat">
+          <p class="stat__n">10+ anos</p>
+          <p class="stat__l">Direito do Consumidor</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero__fade"></div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  FAIXA DE URGÊNCIA — 3 alertas temáticos               ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <section class="urgency reveal">
+    <div class="container">
+      <div class="urgency__grid">
+
+        <div class="urgency__item">
+          <div class="urgency__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div>
+            <p class="urgency__title">Prazo em andamento</p>
+            <p class="urgency__desc">A ação de busca e apreensão pode ser executada em poucos dias após a notificação do banco.</p>
+          </div>
+        </div>
+
+        <div class="urgency__item">
+          <div class="urgency__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <div>
+            <p class="urgency__title">Juros abusivos são ilegais</p>
+            <p class="urgency__desc">Contratos com taxas acima do limite do Banco Central podem ser contestados e revisados na Justiça.</p>
+          </div>
+        </div>
+
+        <div class="urgency__item">
+          <div class="urgency__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="urgency__title">Você tem o direito de se defender</p>
+            <p class="urgency__desc">A lei garante ao consumidor o direito de contestar a retomada do veículo antes de qualquer apreensão.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  BLOCO 3 — CTA WHATSAPP PRINCIPAL                       ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <section class="cta-mid reveal">
+    <div class="container">
+      <div class="wa-block">
+        <!--
+          TROQUE: substitua 5500000000000 pelo número WhatsApp real.
+          Formato: 55 + DDD + número (sem espaços ou traços).
+          Exemplo: 5545991126560
+        -->
+        <a
+          class="btn-wa"
+          href="https://wa.me/554599112656?text=Ol%C3%A1%2C%20Dra.%20Luana!%20Vi%20seu%20an%C3%BAncio%20sobre%20busca%20e%20apreens%C3%A3o%20e%20quero%20saber%20se%20tenho%20direito%20de%20contestar."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Falar com a Dra. Luana pelo WhatsApp"
+          data-cta-btn
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.534 5.862L.057 23.57a.75.75 0 0 0 .92.921l5.773-1.505A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.708 9.708 0 0 1-4.945-1.353l-.353-.21-3.664.955.982-3.577-.23-.367A9.696 9.696 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+          </svg>
+          Falar com a Dra. Luana agora
+        </a>
+        <p class="wa-note">Análise gratuita. Resposta em menos de 1 minuto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  BLOCO 4 — BULLETS DE PROVA                             ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <section class="section section--mid reveal">
+    <div class="container">
+
+      <div class="section__header">
+        <div class="section__label">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <path d="M16 8h4l3 5v3h-7V8z"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+          Defesa contra busca e apreensão
+        </div>
+        <h2 class="section__h">
+          Por que a Dra. Luana pode <span>segurar seu veículo</span>
+        </h2>
+        <p class="section__p">
+          Especialista em contestar contratos de financiamento de veículos
+          com juros abusivos e cláusulas ilegais.
+        </p>
+        <div class="red-bar"></div>
+      </div>
+
+      <ul class="proof-list" role="list">
+
+        <li class="proof-card reveal">
+          <div class="proof-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5">
+              <rect x="1" y="3" width="15" height="13" rx="2"/>
+              <path d="M16 8h4l3 5v3h-7V8z"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <div class="proof-body">
+            <strong>Especialista em busca e apreensão de veículos no Paraná</strong>
+            <p>
+              Atuação focada exclusivamente na defesa de consumidores
+              com financiamentos em aberto e ameaça de retomada do veículo
+              pelo banco. Conhecimento profundo da legislação e jurisprudência.
+            </p>
+          </div>
+        </li>
+
+        <li class="proof-card reveal">
+          <div class="proof-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <div class="proof-body">
+            <strong>Análise completa do contrato de financiamento sem custo</strong>
+            <p>
+              Você envia o contrato de financiamento do veículo e a Dra. Luana
+              verifica se há juros acima do permitido ou cláusulas abusivas.
+              Sem compromisso e sem pagar nada pela avaliação.
+            </p>
+          </div>
+        </li>
+
+        <li class="proof-card reveal">
+          <div class="proof-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="proof-body">
+            <strong>Se houver irregularidade, você saberá como segurar o carro</strong>
+            <p>
+              A Dra. Luana apresenta o caminho jurídico para contestar a
+              busca e apreensão, suspender a ação do banco e, em muitos casos,
+              revisar o saldo devedor do financiamento.
+            </p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  BLOCO 5 — REPETIÇÃO DO CTA                             ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <section class="cta-final reveal">
+    <div class="container" style="position:relative;z-index:1;">
+
+      <h2 class="cta-final__h">
+        O banco não pode simplesmente tomar seu carro<br />
+        sem que você <span>conheça seus direitos.</span>
+      </h2>
+
+      <div class="wa-block">
+        <!--
+          TROQUE: substitua 5500000000000 pelo número WhatsApp real.
+        -->
+        <a
+          class="btn-wa"
+          href="https://wa.me/554599112656?text=Ol%C3%A1%2C%20Dra.%20Luana!%20Vi%20seu%20an%C3%BAncio%20sobre%20busca%20e%20apreens%C3%A3o%20e%20quero%20saber%20se%20tenho%20direito%20de%20contestar."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Falar com a Dra. Luana pelo WhatsApp"
+          data-cta-btn
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.534 5.862L.057 23.57a.75.75 0 0 0 .92.921l5.773-1.505A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.708 9.708 0 0 1-4.945-1.353l-.353-.21-3.664.955.982-3.577-.23-.367A9.696 9.696 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+          </svg>
+          Falar com a Dra. Luana agora
+        </a>
+        <p class="wa-note">Análise gratuita. Resposta em menos de 1 minuto.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  RODAPÉ                                                  ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <footer class="footer">
+    &copy; 2026 Dra. Luana Fernandes &mdash; OAB/RS 00000
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // Scroll reveal com IntersectionObserver
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var el = entry.target;
+            var delay = Number(el.dataset.delay || 0);
+            setTimeout(function () { el.classList.add('visible'); }, delay);
+            io.unobserve(el);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(function (el, i) {
+        el.dataset.delay = i * 80;
+        io.observe(el);
+      });
+
+      // Play button customizado
+      var overlay = document.getElementById('videoOverlay');
+      var video   = document.getElementById('draVideo');
+
+      function startVideo() {
+        overlay.classList.add('hidden');
+        video.play();
+      }
+
+      function pauseVideo() {
+        video.pause();
+        overlay.classList.remove('hidden');
+        // Troca o label para "Retomar"
+        var label = overlay.querySelector('.video-play-label');
+        if (label) label.textContent = 'Retomar';
+      }
+
+      if (overlay && video) {
+        overlay.addEventListener('click', startVideo);
+        overlay.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') startVideo();
+        });
+        // Clicar no vídeo enquanto toca → pausa e mostra overlay
+        video.addEventListener('click', pauseVideo);
+      }
+
+      // Tracking — dispara eventos ao clicar em qualquer CTA
+      document.querySelectorAll('[data-cta-btn]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+          if (window.dataLayer) { window.dataLayer.push({ event: 'cta_click' }); }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
